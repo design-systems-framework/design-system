@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import ADGButton from './components/BlueLabel/Button';
-import ADGTextfield from './components/RedLabel/Textfield';
+import BLButton from './components/BlueLabel/Button';
+import RLTextfield from './components/RedLabel/Textfield';
 import Textfield from './components/WhiteLabel/Textfield';
-import NachosButton from './components/RedLabel/Button';
+import RLButton from './components/RedLabel/Button';
 
 import './App.css';
 
@@ -14,10 +14,10 @@ class App extends Component {
           Unstyled Components
         </header>
         <Textfield />
-        <ADGButton>AtlaskitButton</ADGButton>
-        <NachosButton>NachosButton</NachosButton>
+        <BLButton>AtlaskitButton</BLButton>
+        <RLButton>NachosButton</RLButton>
 
-        <ADGTextfield/>
+        <RLTextfield/>
       </div>
 
     );

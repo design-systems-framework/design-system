@@ -21,7 +21,7 @@ import memoizeOne from 'memoize-one';
 import * as TextfieldTokens from './theme';
 import Textfield from '../../WhiteLabel/Textfield';
 
-const adgTheme = (tokens) => ({
+const dlTheme = (tokens) => ({
   inputWrapper: (styles, props) => ({
       ...styles,
       color: props.textColor, // TOKEN
@@ -75,9 +75,9 @@ const adgTheme = (tokens) => ({
     }),
 });
 
-const stylesFn = memoizeOne(adgTheme);
+const stylesFn = memoizeOne(dlTheme);
 
-const ADGContext = createContext({
+const DLContext = createContext({
   backgroundColor: TextfieldTokens.backgroundColor,
   backgroundColorFocus: TextfieldTokens.backgroundColorFocus,
   backgroundColorHover: TextfieldTokens.backgroundColorHover,
@@ -102,11 +102,11 @@ const redLabelTokens = (tokens, { appearance, mode }) => {
   }, {});
 };
 
-const ADGTextfield = (props) => {
-  const tokens = redLabelTokens(useContext(ADGContext), props);
-  const styles = adgTheme(tokens);
+const DLTextfield = (props) => {
+  const tokens = redLabelTokens(useContext(DLContext), props);
+  const styles = dlTheme(tokens);
   return  <Textfield {...props} styles={styles}/>;
 }
 
-ADGTextfield.defaultProps = { appearance: 'standard' };
-export default ADGTextfield;
+DLTextfield.defaultProps = { appearance: 'standard' };
+export default DLTextfield;
