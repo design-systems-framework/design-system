@@ -4,10 +4,11 @@
   "private": true,
   "workspaces": [
     "elemental-ui/*",
-    "unstyled-components/*"
+    "unstyled-components/*",
     "site"
   ],
   "dependencies": {
+    "eslint": "^5.14.1"
   },
   "browserslist": [
     ">0.2%",
