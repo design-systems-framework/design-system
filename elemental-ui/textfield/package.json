@@ -1,0 +1,11 @@
+{
+  "name": "@elemental-ui/textfield",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Thinkmill",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
+  }
+}
