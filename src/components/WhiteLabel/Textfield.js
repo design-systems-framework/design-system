@@ -40,6 +40,7 @@ const Textfield = (props) => {
       props.onFocus(event);
     }
   };
+
   const getStyles = (key, styleProps) => {
     // If there's an existing styles prop
     // check for styles[key](theme[key](styleProps))
