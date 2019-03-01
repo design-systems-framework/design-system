@@ -2,6 +2,7 @@
   "name": "unstyled-components",
   "version": "0.1.0",
   "private": true,
+  "workspaces": ["elemental-ui/*", "unstyled-components/*"],
   "dependencies": {
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
