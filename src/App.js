@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import ADGButton from './components/BlueLabel/Button';
+import ADGTextfield from './components/RedLabel/Textfield';
+import Textfield from './components/WhiteLabel/Textfield';
+import NachosButton from './components/RedLabel/Button';
+
 import './App.css';
 
 class App extends Component {
@@ -7,20 +11,15 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          Unstyled Components
         </header>
+        <Textfield />
+        <ADGButton>AtlaskitButton</ADGButton>
+        <NachosButton>NachosButton</NachosButton>
+
+        <ADGTextfield/>
       </div>
+
     );
   }
 }
