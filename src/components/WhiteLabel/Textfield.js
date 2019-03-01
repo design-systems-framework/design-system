@@ -20,14 +20,10 @@ const defaultStyles = {
 const Textfield = (props) => {
   const {
     styles,
-    appearance,
-    isCompact,
     isDisabled,
-    isMonospaced,
     isReadOnly,
     isRequired,
     isInvalid,
-
     ...rest
   } = props;
 
@@ -59,11 +55,8 @@ const Textfield = (props) => {
   };
 
   const styleProps = {
-    appearance,
-    isCompact,
     isDisabled,
     isFocused,
-    isMonospaced,
     isReadOnly,
     isRequired,
     isInvalid,
