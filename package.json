@@ -5,6 +5,7 @@
   "workspaces": [
     "elemental-ui/*",
     "unstyled-components/*"
+    "site"
   ],
   "dependencies": {
   },
