@@ -2,19 +2,13 @@
   "name": "unstyled-components",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "elemental/*",
+    "unstyled/*",
+    "site"
+  ],
   "dependencies": {
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
-    "react-scripts": "2.1.5"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "eslint": "^5.14.1"
   },
   "browserslist": [
     ">0.2%",
@@ -25,5 +19,8 @@
   "prettier": {
     "trailingComma": "es5",
     "singleQuote": true
+  },
+  "scripts": {
+    "start": "cd ./site && yarn dev"
   }
 }

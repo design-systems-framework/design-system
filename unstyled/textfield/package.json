@@ -1,0 +1,11 @@
+{
+  "name": "@unstyled/textfield",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/core": "^10.0.7",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
+  }
+}
