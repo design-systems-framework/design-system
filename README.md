@@ -1,6 +1,5 @@
 # design-system
 
-
 # TODO
 ## Infra:
   - [] Setup CI
