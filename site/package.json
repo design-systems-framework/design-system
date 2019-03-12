@@ -3,12 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next",
-    "build": "next build",
+    "build:manifest": "node ./build-manifest.js",
+    "dev": "yarn build:manifest && next",
+    "build": "yarn build:manifest && next build",
     "start": "next start"
   },
   "dependencies": {
+    "find-root": "^1.1.0",
+    "glob": "^7.1.3",
+    "glob-promise": "^3.4.0",
     "next": "^8.0.3",
+    "next-transpile-modules": "^2.0.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3"
   }

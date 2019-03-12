@@ -1,5 +1,5 @@
 import React from 'react';
-import Textfield from '@unstyled-components/textfield';
+import Textfield from '@unstyled/textfield';
 
 export default () => (
   <>

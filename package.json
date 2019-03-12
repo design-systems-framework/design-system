@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "workspaces": [
-    "elemental-ui/*",
-    "unstyled-components/*",
+    "elemental/*",
+    "unstyled/*",
     "site"
   ],
   "dependencies": {
@@ -19,5 +19,8 @@
   "prettier": {
     "trailingComma": "es5",
     "singleQuote": true
+  },
+  "scripts": {
+    "start": "cd ./site && yarn dev"
   }
 }
