@@ -13,7 +13,7 @@
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
     "eslint": "^5.14.1",
-    "preconstruct": "^0.0.61",
+    "preconstruct": "^0.0.62",
     "react": "^16.8.3"
   },
   "browserslist": [
@@ -30,8 +30,9 @@
     "watch": "preconstruct watch",
     "build": "preconstruct build",
     "version-packages": "build-releases version",
-    "publish-packages": "build-releases publish --public",
-    "start": "cd ./site && yarn dev"
+    "publish-packages": "yarn build && build-releases publish --public",
+    "start": "cd ./site && yarn dev",
+    "postinstall": "preconstruct dev"
   },
   "preconstruct": {
     "packages": [
