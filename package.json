@@ -12,6 +12,8 @@
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
+    "@brisk-docs/website": "^0.3.9",
+    "babel-plugin-transform-dynamic-import": "^2.1.0",
     "eslint": "^5.14.1",
     "preconstruct": "^0.0.61",
     "react": "^16.8.3"
