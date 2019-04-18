@@ -1,11 +1,17 @@
 {
   "name": "@elemental/textfield",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "dist/textfield.cjs.js",
+  "module": "dist/textfield.esm.js",
   "author": "Thinkmill",
   "license": "MIT",
   "dependencies": {
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3"
+    "@unstyled/textfield": "^1.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.3"
+  },
+  "devDependencies": {
+    "react": "^16.8.3"
   }
 }

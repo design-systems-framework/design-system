@@ -8,7 +8,13 @@
     "site"
   ],
   "dependencies": {
-    "eslint": "^5.14.1"
+    "@atlaskit/build-releases": "^3.0.3",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "eslint": "^5.14.1",
+    "preconstruct": "^0.0.61",
+    "react": "^16.8.3"
   },
   "browserslist": [
     ">0.2%",
@@ -21,6 +27,23 @@
     "singleQuote": true
   },
   "scripts": {
+    "watch": "preconstruct watch",
+    "build": "preconstruct build",
+    "version-packages": "build-releases version",
+    "publish-packages": "build-releases publish --public",
     "start": "cd ./site && yarn dev"
+  },
+  "preconstruct": {
+    "packages": [
+      "elemental/*",
+      "unstyled/*"
+    ]
+  },
+  "bolt": {
+    "workspaces": [
+      "elemental/*",
+      "unstyled/*",
+      "site"
+    ]
   }
 }

@@ -1,10 +1,17 @@
 {
   "name": "@unstyled/textfield",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "dist/textfield.cjs.js",
+  "module": "dist/textfield.esm.js",
   "license": "MIT",
   "dependencies": {
-    "@emotion/core": "^10.0.7",
+    "@babel/runtime": "^7.4.3",
+    "@emotion/core": "^10.0.7"
+  },
+  "peerDependencies": {
+    "react": "^16.8.3"
+  },
+  "devDependencies": {
     "react": "^16.8.3",
     "react-dom": "^16.8.3"
   }

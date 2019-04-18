@@ -3,9 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build:manifest": "node ./build-manifest.js",
-    "dev": "yarn build:manifest && next",
-    "build": "yarn build:manifest && next build",
+    "dev": "next",
+    "build": "next build",
     "start": "next start"
   },
   "dependencies": {
