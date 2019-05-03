@@ -1,7 +1,7 @@
 # Design Systems Framework: Raison d’être
 
-## Mission Statement 
-To make building, maintaining and distributing your design-system simpler.
+## Mission Statement
+To make building, maintaining and distributing your design-system simpler in React.
 
 ## The Problem
 Design systems, help us efficiently apply and distribute our design opinions throughout our products. This efficiency helps us create user experiences that are more consistent across products, which lends to opportunities  for cohesive interoperability.  (Bitbucket and Jira for example or MacOS and iOS)
@@ -50,6 +50,123 @@ The aim of DSF is not just to make *_building_* your components easier, but also
 Not every design system should be built in the same way, but where possible we want to empower design-system authors by sharing  tools that make building design-systems simpler and faster.
 
 # Design Systems Framework Patterns
+
 ## RenderProps
+
+### When to:
+Render props are really useful in scenarios where the component author has opinions to enforce about functionality of the component that has little to do with how the primitive html elements are rendered.
+
+Take the following form example:
+
+```
+<Form>
+  ({ formProps, fieldProps }) => (
+    <form {...formProps}>
+      <input type="text" {...fieldProps}/>
+    </form>
+  )
+</Form>
+```
+
+In this case the <Form> component really only wants to manage state and events around the captured data from the form specified by the consumer. What the form elements are, how they're rendered on the page and in what order is completely irrelevant. In this case renderProps are an excellent pattern, as we are afforded incredible flexibility around which elements get rendered and how, while still providing a clean and simple API for the functionality that we wish to take ownership of.
+
+### When not to:
+
 ## Components API
+
+There are use cases however, where we not only want to manage state and functionality around data flow, but also to enforce relationships between elements within our component. (rendering order for example)
+
+Modeling this behaviour to a renderProps pattern soon becomes unwieldy.
+
+```
+import Select, { Container, Control, Value, Menu } from '@my-design-system/select';
+
+<Select>
+  {({ containerProps, controlProps, menuProps, valueProps, optionProps }) => (
+    <Container {...containerProps}>
+      <Control {...controlProps}>
+        <Value {...valueProps}/>
+      </Control>
+      <Menu {...menuProps}>
+        <Option {...optionProps} />
+      </Menu>
+    </Container>
+  )}
+</Select>
+```
+
+More importantly, often times users only really want to configure a very small portion of the supplied functionality in our component. For example adding a header element for the menu. The above implementation forces consumers to remember the complex relationship between components within the select every single time they want to make a small augmentation, this is brittle API and is both prone to user error and difficult to maintain/scale.
+
+```
+// 80% case
+
+import Select, { Container, Control, Value, Menu } from '@my-design-system/select';
+
+<Select>
+  {({ containerProps, controlProps, menuProps, valueProps, optionProps }) => (
+    <Container {...containerProps}>
+      <Control {...controlProps}>
+        <Value {...valueProps}/>
+      </Control>
+      <Menu {...menuProps}>
+        <Option {...optionProps} />
+      </Menu>
+    </Container>
+  )}
+</Select>
+
+-------
+
+//20% case
+
+import Select, { Container, Control, Value, Menu } from '@my-design-system/select';
+
+<Select>
+  {({ containerProps, controlProps, menuProps, valueProps, optionProps }) => (
+    <Container {...containerProps}>
+      <Control {...controlProps}>
+        <Value {...valueProps}/>
+      </Control>
+      <Menu {...menuProps}>
+        <div>
+          <h1>Header</h1>
+        </div>
+        <Option {...optionProps} />
+      </Menu>
+    </Container>
+  )}
+</Select>
+```
+
+In these cases, we've found success in allowing users the ability to provide components that encapsulate customised functionality.
+
+Let's augment the renderProp example above to illustrate this:
+```
+80% case
+
+import Select from '@my-design-system/select';
+<Select />
+
+40% case
+import Select, { Menu } from '@my-design-system/select';
+
+const CustomMenu = (props) => {
+  return (
+    <Menu {...props} >
+      <div>
+        <h1>Header</h1>
+      </div>
+      {props.children}
+    </Menu>
+  )
+}
+
+<Select components={
+  Menu: CustomMenu
+} />
+```
+
+As we can see from the above, allowing users to customize specific components in this way, allows them to ignore complexity around components they don't wish to configure, while still allowing them to have fine granular control over the functionality they *_do_* want to own.
+
+
 ## Styles API
