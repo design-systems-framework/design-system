@@ -1,5 +1,5 @@
 import React from 'react';
-import Textfield from '@unstyled/textfield';
+import Textfield from '@ds-framework/textfield';
 
 export default () => (
   <div>
