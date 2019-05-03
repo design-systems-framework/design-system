@@ -1,4 +1,8 @@
 # Design Systems Framework: Raison d’être
+
+## Mission Statement 
+To make building, maintaining and distributing your design-system simpler.
+
 ## The Problem
 Design systems, help us efficiently apply and distribute our design opinions throughout our products. This efficiency helps us create user experiences that are more consistent across products, which lends to opportunities  for cohesive interoperability.  (Bitbucket and Jira for example or MacOS and iOS)
 
@@ -48,4 +52,4 @@ Not every design system should be built in the same way, but where possible we w
 # Design Systems Framework Patterns
 ## RenderProps
 ## Components API
-## Styles API 
+## Styles API
