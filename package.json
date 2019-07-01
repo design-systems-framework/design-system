@@ -50,7 +50,9 @@
     "version-packages": "changeset bump",
     "publish-packages": "yarn build && changeset release",
     "start": "cd ./site && yarn dev",
-    "postinstall": "preconstruct dev && bolt-check"
+    "postinstall": "preconstruct dev && bolt-check",
+    "lint": "eslint .",
+    "lint:fix": "yarn lint --fix"
   },
   "preconstruct": {
     "packages": [
