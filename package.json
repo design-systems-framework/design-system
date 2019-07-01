@@ -36,8 +36,8 @@
   "scripts": {
     "watch": "preconstruct watch",
     "build": "preconstruct build",
-    "version-packages": "build-releases version",
-    "publish-packages": "yarn build && build-releases publish --public",
+    "version-packages": "changeset bump",
+    "publish-packages": "yarn build && changeset release",
     "start": "cd ./site && yarn dev",
     "postinstall": "preconstruct dev && bolt-check"
   },
