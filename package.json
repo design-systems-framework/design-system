@@ -1,10 +1,10 @@
 {
-  "name": "unstyled-components",
+  "name": "@ds-framework/monorepo",
   "version": "0.1.0",
   "private": true,
   "workspaces": [
     "elemental/*",
-    "unstyled/*",
+    "ds-framework/*",
     "site"
   ],
   "dependencies": {
@@ -13,7 +13,7 @@
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
     "eslint": "^5.14.1",
-    "preconstruct": "^0.0.62",
+    "preconstruct": "^0.0.81",
     "react": "^16.8.3"
   },
   "browserslist": [
@@ -37,13 +37,13 @@
   "preconstruct": {
     "packages": [
       "elemental/*",
-      "unstyled/*"
+      "ds-framework/*"
     ]
   },
   "bolt": {
     "workspaces": [
       "elemental/*",
-      "unstyled/*",
+      "framework/*",
       "site"
     ]
   }
