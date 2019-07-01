@@ -1,6 +1,6 @@
-/* @jsx jsx */
+/** @jsx jsx */
 
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { jsx } from '@emotion/core';
 
 const inputWrapperStyles = props => ({
