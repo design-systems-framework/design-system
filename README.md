@@ -1,3 +1,8 @@
+---
+name: Introduction
+path: '/'
+---
+
 # Design Systems Framework: Raison d’être
 
 ## Mission Statement 

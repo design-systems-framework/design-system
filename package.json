@@ -5,7 +5,8 @@
   "workspaces": [
     "elemental/*",
     "ds-framework/*",
-    "site"
+    "site",
+    "docs"
   ],
   "dependencies": {
     "@babel/core": "^7.4.5",
@@ -16,6 +17,8 @@
     "@emotion/core": "^10.0.7",
     "babel-eslint": "^10.0.2",
     "bolt-check": "^0.3.0",
+    "docz": "^1.2.0",
+    "docz-theme-default": "^1.2.0",
     "eslint": "^5.14.1",
     "eslint-config-prettier": "^6.0.0",
     "eslint-config-standard": "^12.0.0",
