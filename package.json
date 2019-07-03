@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "workspaces": [
-    "elemental/*",
+    "elemental-ui/*",
     "ds-framework/*",
     "site"
   ],
@@ -56,7 +56,7 @@
   },
   "preconstruct": {
     "packages": [
-      "elemental/*",
+      "elemental-ui/*",
       "ds-framework/*"
     ]
   }

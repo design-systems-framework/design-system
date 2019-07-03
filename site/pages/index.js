@@ -1,6 +1,6 @@
 import React from 'react';
 import HtmlHead from '../components/HtmlHead';
-import ElementalTextfield from '@elemental/textfield';
+import ElementalTextfield from '@elemental-ui/textfield';
 
 const Home = () => (
   <>
