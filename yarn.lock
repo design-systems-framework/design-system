@@ -8371,10 +8371,10 @@ postcss-value-parser@^3.3.0:
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-3.3.1.tgz#9ff822547e2893213cf1c30efa51ac5fd1ba8281"
   integrity sha512-pISE66AbVkp4fDQ7VHBwRNXzAAKJjw4Vw7nWI/+Q3vuly7SNfgYXvm6i5IgFylHGK5sP/xHAbB7N49OS4gWNyQ==
 
-preconstruct@^0.0.81:
-  version "0.0.81"
-  resolved "https://registry.yarnpkg.com/preconstruct/-/preconstruct-0.0.81.tgz#31ca707af1d69232d9383e44ef11f60784163061"
-  integrity sha512-T1FTx2OF8kwKSDx9UDgM25xcAXOYkQWngmn0O+fo5yFJcZncs/MbeJ2aO+SNeAFxanZT8On2z4NdsOfLJ/pBaQ==
+preconstruct@^0.0.82:
+  version "0.0.82"
+  resolved "https://registry.yarnpkg.com/preconstruct/-/preconstruct-0.0.82.tgz#424f05e058216872ec4b975150e2d7729ea50379"
+  integrity sha512-ebQRgAKHTrYuef0OtVf71Vo1yYMJqXaBFv72higlylfY3Ir+SuPVl9tbq9AT2E1xum1qM6HllBCdzc2G7PpMew==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.1.2"
