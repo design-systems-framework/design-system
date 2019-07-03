@@ -4,9 +4,7 @@
   "private": true,
   "workspaces": [
     "elemental/*",
-    "ds-framework/*",
-    "site",
-    "docs"
+    "ds-framework/*"
   ],
   "dependencies": {
     "@babel/core": "^7.4.5",
@@ -55,7 +53,9 @@
     "start": "cd ./site && yarn dev",
     "postinstall": "preconstruct dev && bolt-check",
     "lint": "eslint .",
-    "lint:fix": "yarn lint --fix"
+    "lint:fix": "yarn lint --fix",
+    "docs": "docz dev",
+    "docs:build": "docz build"
   },
   "preconstruct": {
     "packages": [
