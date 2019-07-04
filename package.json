@@ -1,10 +1,10 @@
 {
-  "name": "@ds-framework/monorepo",
+  "name": "@design-system/monorepo",
   "version": "0.1.0",
   "private": true,
   "workspaces": [
     "elemental-ui/*",
-    "ds-framework/*",
+    "design-system/*",
     "site"
   ],
   "dependencies": {
@@ -57,7 +57,7 @@
   "preconstruct": {
     "packages": [
       "elemental-ui/*",
-      "ds-framework/*"
+      "design-system/*"
     ]
   }
 }
