@@ -48,7 +48,7 @@
     "watch": "preconstruct watch",
     "build": "preconstruct build",
     "version-packages": "changeset bump",
-    "publish-packages": "yarn build && changeset release",
+    "release": "yarn build && changeset release",
     "start": "cd ./site && yarn dev",
     "postinstall": "preconstruct dev && bolt-check",
     "lint": "eslint .",
