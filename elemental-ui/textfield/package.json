@@ -1,5 +1,5 @@
 {
-  "name": "@elemental/textfield",
+  "name": "@elemental-ui/textfield",
   "version": "1.0.0",
   "main": "dist/textfield.cjs.js",
   "module": "dist/textfield.esm.js",
