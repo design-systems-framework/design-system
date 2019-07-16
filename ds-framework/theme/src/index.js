@@ -8,11 +8,15 @@ function createTheme (defaultTokens = {}) {
     return children(tokens);
   }
   function Provider ({ value: valueTokens, children }) {
-    const prevTokens = useContext(ThemeCtx);
+    const ctxTokens = useContext(ThemeCtx);
     const tokens = merge(ctxTokens, valueTokens);
     <ThemeCtx.Provider value={tokens}>
       {children}
     </ThemeCtx.Provider>
+  }
+  return {
+    Consumer,
+    Provider
   }
 }
 
