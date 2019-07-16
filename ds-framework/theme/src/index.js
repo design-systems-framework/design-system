@@ -1,25 +1,18 @@
 import React, { createContext, useContext } from 'react';
-const unary = t => t;
 
-function createTheme (themeTokens = {}) {
-  const ThemeCtx = createContext(unary)
-  function Consumer ({ children }) {
-    const tfn = useContext(ThemeCtx);
-    return children(tfn(theme));
+function createTheme (defaultTokens = {}) {
+  const ThemeCtx = createContext(defaultTokens);
+  function Consumer ({ children, ...rest }) {
+    const ctxTokens = useContext(ThemeCtx);
+    const tokens = merge(defaultTokens, ctxTokens);
+    return children(tokens);
   }
-
-  function Provider ({ value: vfn, children }) {
-    const tfn = useContext(ThemeCtx);
-    const newTfn = (t) => tfn(vfn(t));
-    return (
-      <ThemeCtx.Provider value={newTfn}>
-        {children}
-      </ThemeCtx.Provider>
-    );
-  }
-  return {
-    Provider,
-    Consumer
+  function Provider ({ value: valueTokens, children }) {
+    const prevTokens = useContext(ThemeCtx);
+    const tokens = merge(ctxTokens, valueTokens);
+    <ThemeCtx.Provider value={tokens}>
+      {children}
+    </ThemeCtx.Provider>
   }
 }
 
