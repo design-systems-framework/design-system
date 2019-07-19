@@ -14,6 +14,7 @@
     "@babel/runtime": "^7.4.3",
     "@changesets/cli": "^1.2.0",
     "@emotion/core": "^10.0.7",
+    "@mitchellhamilton/experimental-changesets-auto-release": "^0.0.2",
     "babel-eslint": "^10.0.2",
     "bolt-check": "^0.3.0",
     "eslint": "^5.14.1",
