@@ -17,6 +17,23 @@ jobs:
       - run:
           name: 'ESLint'
           command: yarn eslint .
+  types:
+    docker:
+      - image: circleci/node:10.6.0
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v2-dependencies-{{ checksum "yarn.lock" }}
+            # fallback to using the latest cache if no exact match is found
+            - v2-dependencies-
+      - run:
+          name: Install
+          command: yarn install --pure-lockfile
+      - run:
+          name: 'Type Checking'
+          command: yarn tsc
 
   release:
     docker:
@@ -41,6 +58,7 @@ workflows:
   test:
     jobs:
       - lint
+      - types
   release:
     jobs:
       - release:
