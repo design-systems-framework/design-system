@@ -1,7 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
 
-export default ({ title = 'Design System™', children }) => (
+type Props = {
+  title: string;
+  children?: React.ReactNode;
+};
+
+export default ({ title = 'Design System™', children }: Props) => (
   <Head>
     <title>{title}</title>
     <link

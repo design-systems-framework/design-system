@@ -6,7 +6,8 @@
   "author": "Thinkmill",
   "license": "MIT",
   "dependencies": {
-    "@design-system/textfield": "^0.1.1"
+    "@design-system/textfield": "^0.1.1",
+    "@types/react": "^16.8.23"
   },
   "peerDependencies": {
     "react": "^16.8.3"

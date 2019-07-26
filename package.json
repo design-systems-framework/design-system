@@ -11,6 +11,7 @@
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
     "@babel/runtime": "^7.4.3",
     "@changesets/cli": "^1.2.0",
     "@emotion/core": "^10.0.7",
@@ -29,11 +30,13 @@
     "eslint-plugin-standard": "^4.0.0",
     "glob": "^7.1.3",
     "glob-promise": "^3.4.0",
-    "next": "^8.0.3",
+    "next": "^9.0.2",
     "preconstruct": "^0.0.82",
     "prettier": "^1.18.2",
     "react": "^16.8.3",
-    "react-dom": "^16.8.3"
+    "react-dom": "^16.8.3",
+    "typescript": "^3.5.3",
+    "@types/react": "^16.8.23"
   },
   "browserslist": [
     ">0.2%",
