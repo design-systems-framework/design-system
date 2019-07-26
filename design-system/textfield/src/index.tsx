@@ -63,13 +63,9 @@ const Textfield = ({
     // otherwise just return theme[key](styleProps);
     const defaultStyle = defaultStyles[key](styleProps);
 
-    if (styles) {
-      let customStyleFunc = styles[key];
-      if (customStyleFunc !== undefined) {
-        return customStyleFunc(defaultStyle, styleProps);
-      }
-    }
-    return defaultStyle;
+    return styles && styles[key]
+      ? styles[key](defaultStyle, styleProps)
+      : defaultStyle;
   };
 
   const handleOnFocus = (event: React.FocusEvent<HTMLInputElement>) => {
