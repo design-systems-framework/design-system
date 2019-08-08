@@ -1,0 +1,9 @@
+{
+  // next creates a tsconfig even if there's one in a higher directory
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    // it also sets things so we need to do this
+    "allowJs": false,
+    "strict": true
+  }
+}
