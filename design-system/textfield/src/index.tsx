@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import { useState, useRef } from 'react';
+import { useState, useRef, InputHTMLAttributes, FocusEvent } from 'react';
 import { jsx, CSSObject } from '@emotion/core';
 
 type BaseProps = {
@@ -12,7 +12,7 @@ type BaseProps = {
 
 type StyleProps = BaseProps & {
   isFocused: boolean;
-} & React.InputHTMLAttributes<HTMLInputElement>;
+} & InputHTMLAttributes<HTMLInputElement>;
 
 type StyleFunc = (props: StyleProps) => CSSObject;
 
@@ -39,7 +39,7 @@ const defaultStyles = {
 } as const;
 
 type Props = Partial<BaseProps> &
-  React.InputHTMLAttributes<HTMLInputElement> & {
+  InputHTMLAttributes<HTMLInputElement> & {
     styles?: StylesProp<StyleProps, typeof defaultStyles>;
   };
 
@@ -68,14 +68,14 @@ const Textfield = ({
       : defaultStyle;
   };
 
-  const handleOnFocus = (event: React.FocusEvent<HTMLInputElement>) => {
+  const handleOnFocus = (event: FocusEvent<HTMLInputElement>) => {
     setFocused(true);
     if (rest.onFocus) {
       rest.onFocus(event);
     }
   };
 
-  const handleOnBlur = (event: React.FocusEvent<HTMLInputElement>) => {
+  const handleOnBlur = (event: FocusEvent<HTMLInputElement>) => {
     setFocused(false);
     if (rest.onBlur) {
       rest.onBlur(event);
