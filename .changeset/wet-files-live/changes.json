@@ -1,7 +1,0 @@
-{
-  "releases": [
-    { "name": "@design-system/textfield", "type": "patch" },
-    { "name": "@elemental-ui/textfield", "type": "patch" }
-  ],
-  "dependents": []
-}
