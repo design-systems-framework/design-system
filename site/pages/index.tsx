@@ -5,7 +5,7 @@ import Button from '@elemental-ui/button';
 import Checkbox from '@elemental-ui/checkbox';
 import Radio from '@elemental-ui/radio';
 import Textarea from '@elemental-ui/textarea';
-import Textinput from '@elemental-ui/textinput';
+import TextInput from '@elemental-ui/textinput';
 
 const Home = () => (
   <>
@@ -24,7 +24,7 @@ const Home = () => (
     <h2>Textarea</h2>
     <Textarea />
     <h2>Text Input</h2>
-    <Textinput />
+    <TextInput />
   </>
 );
 
