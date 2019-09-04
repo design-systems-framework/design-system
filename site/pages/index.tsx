@@ -14,10 +14,10 @@ const Home = () => (
     <h2>Button</h2>
     <Button>Click Me</Button>
     <h2>Checkbox</h2>
-    <Checkbox name="check_one" />
+    <Checkbox id="check_one" />
     <label htmlFor="check_one">Check Me</label>
     <h2>Radio</h2>
-    <Radio name="radio_one" />
+    <Radio id="radio_one" />
     <label htmlFor="radio_one">Check Me</label>
     <h2>Textarea</h2>
     <Textarea />
