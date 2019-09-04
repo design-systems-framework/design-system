@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import HtmlHead from '../components/HtmlHead';
 import Button from '@elemental-ui/button';
 import Checkbox from '@elemental-ui/checkbox';
@@ -15,10 +15,10 @@ const Home = () => (
     <Button>Click Me</Button>
     <h2>Checkbox</h2>
     <Checkbox name="check_one" />
-    <label for="check_one">Check Me</label>
+    <label htmlFor="check_one">Check Me</label>
     <h2>Radio</h2>
     <Radio name="radio_one" />
-    <label for="radio_one">Check Me</label>
+    <label htmlFor="radio_one">Check Me</label>
     <h2>Textarea</h2>
     <Textarea />
     <h2>Text Input</h2>

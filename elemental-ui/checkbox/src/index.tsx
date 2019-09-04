@@ -25,14 +25,15 @@ function getOverrides(key: string, overrides: Record<string, any> = {}) {
   }
 }
 
-export interface TextAreaProps {
+export interface TextAreaProps extends React.AllHTMLAttributes<HTMLInputElement>{
   overrides?: Record<string, any>;
 }
-
-export default function Input({ overrides, ...props }: TextAreaProps) {
+const Input: React.ComponentType<TextAreaProps> = function Input({ overrides, ...props }: TextAreaProps) {
   const { styles, attributes, component: InputComponent } = getOverrides(
     'Input',
     overrides
   );
   return <InputComponent css={styles(props)} {...props} />;
 }
+
+export default Input

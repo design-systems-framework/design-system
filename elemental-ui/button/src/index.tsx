@@ -23,14 +23,16 @@ function getOverrides(key: string, overrides: Record<string, any> = {}) {
   }
 }
 
-export interface TextAreaProps {
+export interface ButtonProps {
   overrides?: Record<string, any>;
 }
 
-export default function Button({ overrides, ...props }: TextAreaProps) {
+const Button: React.ComponentType<ButtonProps> = function Button({ overrides, ...props }: ButtonProps) {
   const { styles, attributes, component: InputComponent } = getOverrides(
     'Input',
     overrides
   );
   return <InputComponent css={styles(props)} {...props} />;
 }
+
+export default Button

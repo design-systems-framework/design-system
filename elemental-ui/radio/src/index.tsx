@@ -25,7 +25,7 @@ function getOverrides(key: string, overrides: Record<string, any> = {}) {
   }
 }
 
-export interface TextAreaProps {
+export interface TextAreaProps extends React.AllHTMLAttributes<HTMLInputElement>{
   overrides?: Record<string, any>;
 }
 
