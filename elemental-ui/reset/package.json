@@ -1,0 +1,19 @@
+{
+  "name": "@elemental-ui/reset",
+  "version": "0.0.1",
+  "main": "dist/reset.cjs.js",
+  "module": "dist/reset.esm.js",
+  "author": "Thinkmill",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.4.3",
+    "@emotion/core": "^10.0.7",
+    "@types/react": "^16.8.23"
+  },
+  "peerDependencies": {
+    "react": "^16.8.9"
+  },
+  "devDependencies": {
+    "react": "^16.8.9"
+  }
+}
