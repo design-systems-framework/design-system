@@ -8,7 +8,7 @@ import Textinput from '@elemental-ui/textinput';
 
 const Home = () => (
   <>
-    <HtmlHead title="Design Sysem - Home" />
+    <HtmlHead title="Design System - Home" />
     <h1>Design System™</h1>
     <hr />
     <h2>Button</h2>
