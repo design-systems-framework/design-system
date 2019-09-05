@@ -1,8 +1,9 @@
 {
-  "name": "@design-system/textfield",
-  "version": "0.1.2",
-  "main": "dist/textfield.cjs.js",
-  "module": "dist/textfield.esm.js",
+  "name": "@elemental-ui/textarea",
+  "version": "0.0.1",
+  "main": "dist/textarea.cjs.js",
+  "module": "dist/textarea.esm.js",
+  "author": "Thinkmill",
   "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.4.3",
@@ -13,7 +14,6 @@
     "react": "^16.8.9"
   },
   "devDependencies": {
-    "react": "^16.8.9",
-    "react-dom": "^16.8.3"
+    "react": "^16.8.9"
   }
 }
